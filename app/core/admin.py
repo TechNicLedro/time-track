@@ -8,6 +8,7 @@ from django.utils.translation import gettext_lazy as _
 
 from core import models
 
+
 class UserAdmin(BaseUserAdmin):
     """Define the admin page for user"""
     ordering = ['id']
@@ -28,7 +29,7 @@ class UserAdmin(BaseUserAdmin):
         (_('Important dates'), {'fields': ('last_login',)}),
     )
     readonly_fields = ['last_login']
-    add_fieldsets =(
+    add_fieldsets = (
         (None, {
             'classes': ('wide',),
             'fields': (
