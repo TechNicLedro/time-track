@@ -14,8 +14,8 @@ class RecipeViewSet(viewsets.ModelViewSet):
     """View to manage recipe APIs"""
     serializer_class = serializers.RecipeSerializer
     queryset = Recipe.objects.all()
-    authentication_class = [TokenAuthentication]
-    permission_class = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         """Retrive recipes for the authenticated user"""
